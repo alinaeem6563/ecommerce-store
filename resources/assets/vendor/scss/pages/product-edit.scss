@@ -1,0 +1,515 @@
+// Edit Product Page Styles
+
+// Import variables
+@import'./variables.scss';
+$border-color: #dee2e6;
+// Edit Product Container
+.edit-product-wrapper {
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+// Product Status Bar
+.product-status-bar {
+  .avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: $border-radius;
+    
+    &.avatar-md {
+      width: 2.25rem;
+      height: 2.25rem;
+      font-size: 1rem;
+    }
+    
+    i {
+      font-size: 1.25rem;
+    }
+  }
+  
+  .bg-primary-subtle {
+    background-color: rgba($primary, 0.1);
+  }
+  
+  .bg-success-subtle {
+    background-color: rgba($success, 0.1);
+  }
+  
+  .bg-warning-subtle {
+    background-color: rgba($warning, 0.1);
+  }
+  
+  .bg-danger-subtle {
+    background-color: rgba($danger, 0.1);
+  }
+  
+  .bg-info-subtle {
+    background-color: rgba($cyan, 0.1);
+  }
+  
+  .bg-secondary-subtle {
+    background-color: rgba($secondary, 0.1);
+  }
+  
+  .text-primary {
+    color: $primary !important;
+  }
+  
+  .text-success {
+    color: $success !important;
+  }
+  
+  .text-warning {
+    color: $warning !important;
+  }
+  
+  .text-danger {
+    color: $danger !important;
+  }
+  
+  .text-info {
+    color: $cyan !important;
+  }
+  
+  .text-secondary {
+    color: $secondary !important;
+  }
+}
+
+// Form Tabs
+.nav-tabs {
+  border-color: $border-color;
+  
+  .nav-item {
+    margin-bottom: -1px;
+  }
+  
+  .nav-link {
+    border: none;
+    color: $gray-600;
+    padding: 0.75rem 1rem;
+    font-weight: $font-weight-medium;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease-in-out;
+    
+    i {
+      margin-right: 0.5rem;
+    }
+    
+    &:hover {
+      color: $primary;
+      border-color: transparent;
+    }
+    
+    &.active {
+      color: $primary;
+      background-color: transparent;
+      border-bottom: 2px solid $primary;
+    }
+  }
+}
+
+// Form Elements
+.form-label {
+  font-weight: $font-weight-medium;
+  margin-bottom: 0.5rem;
+}
+
+.form-control, .form-select {
+  border-color: $border-color;
+  padding: 0.5rem 0.75rem;
+  
+  &:focus {
+    border-color: $primary;
+    box-shadow: 0 0 0 0.25rem rgba($primary, 0.25);
+  }
+  
+  &.is-invalid {
+    border-color: $danger;
+    
+    &:focus {
+      box-shadow: 0 0 0 0.25rem rgba($danger, 0.25);
+    }
+  }
+}
+
+.input-group-text {
+  background-color: $light;
+  border-color: $border-color;
+}
+
+.form-check-input {
+  &:checked {
+    background-color: $primary;
+    border-color: $primary;
+  }
+  
+  &:focus {
+    border-color: $primary;
+    box-shadow: 0 0 0 0.25rem rgba($primary, 0.25);
+  }
+}
+
+.form-switch {
+  .form-check-input {
+    height: 1.25rem;
+    width: 2.25rem;
+    margin-top: 0.125rem;
+  }
+}
+
+// Image Upload
+.image-upload-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border: 2px dashed $border-color;
+  border-radius: $border-radius;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  
+  &:hover {
+    border-color: $primary;
+  }
+  
+  .image-preview {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $gray-500;
+    
+    i {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+.image-gallery-container {
+  position: relative;
+  width: 100%;
+  min-height: 200px;
+  border: 2px dashed $border-color;
+  border-radius: $border-radius;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  
+  &:hover {
+    border-color: $primary;
+  }
+  
+  .image-gallery-preview {
+    width: 100%;
+    min-height: 200px;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    
+    .gallery-upload-placeholder {
+      width: 150px;
+      height: 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: $gray-500;
+      border: 1px dashed $border-color;
+      border-radius: $border-radius;
+      
+      i {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+    
+    .gallery-item {
+      position: relative;
+      width: 150px;
+      height: 150px;
+      border-radius: $border-radius;
+      overflow: hidden;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      
+      .gallery-item-actions {
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+      }
+      
+      &:hover .gallery-item-actions {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.document-upload-container {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  border: 2px dashed $border-color;
+  border-radius: $border-radius;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  
+  &:hover {
+    border-color: $primary;
+  }
+  
+  .document-preview {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: $gray-500;
+    
+    i {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .existing-documents {
+      width: 100%;
+      max-height: 100px;
+      overflow-y: auto;
+    }
+    
+    .document-upload-new {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+  }
+}
+
+// Variant Table
+.variant-image-preview {
+  width: 60px;
+  height: 60px;
+  border-radius: $border-radius-sm;
+  overflow: hidden;
+  margin: 0 auto;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .no-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $light;
+    color: $gray-500;
+    font-size: 0.75rem;
+    text-align: center;
+  }
+  
+  .variant-image-input {
+    display: none;
+  }
+}
+
+// Buttons
+.btn {
+  font-weight: $font-weight-medium;
+  
+  &.btn-primary {
+    background-color: $primary;
+    border-color: $primary;
+    
+    &:hover, &:focus {
+      background-color: darken($primary, 5%);
+      border-color: darken($primary, 5%);
+    }
+  }
+  
+  &.btn-outline-primary {
+    color: $primary;
+    border-color: $primary;
+    
+    &:hover, &:focus {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+  
+  &.btn-danger {
+    background-color: $danger;
+    border-color: $danger;
+    
+    &:hover, &:focus {
+      background-color: darken($danger, 5%);
+      border-color: darken($danger, 5%);
+    }
+  }
+  
+  &.btn-outline-danger {
+    color: $danger;
+    border-color: $danger;
+    
+    &:hover, &:focus {
+      background-color: $danger;
+      color: $white;
+    }
+  }
+}
+
+// Cards
+.card {
+  border: none;
+  box-shadow: $box-shadow-sm;
+  margin-bottom: 1.5rem;
+  
+  .card-header {
+    background-color: transparent;
+    border-bottom: 1px solid $border-color;
+    padding: 1rem 1.25rem;
+    
+    .card-title {
+      font-weight: $font-weight-semibold;
+      margin-bottom: 0;
+    }
+  }
+  
+  .card-body {
+    padding: 1.25rem;
+  }
+}
+
+// Select2 Customization
+.select2-container--default .select2-selection--single,
+.select2-container--default .select2-selection--multiple {
+  border-color: $border-color;
+  
+  &:focus {
+    border-color: $primary;
+  }
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: $primary;
+}
+
+// Rich Text Editor
+.tox-tinymce {
+  border-color: $border-color !important;
+}
+
+// Responsive Adjustments
+@media (max-width: 767.98px) {
+  .nav-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    white-space: nowrap;
+    
+    .nav-link {
+      padding: 0.5rem 0.75rem;
+      font-size: 0.875rem;
+      
+      i {
+        margin-right: 0.25rem;
+      }
+    }
+  }
+  
+  .product-status-bar {
+    .card {
+      margin-bottom: 1rem;
+    }
+  }
+  
+  .image-gallery-preview {
+    .gallery-item {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  
+  .d-flex.justify-content-between {
+    flex-wrap: wrap;
+    gap: 1rem;
+    
+    button {
+      flex: 1;
+    }
+  }
+}
+
+// Dark Mode Support
+.dark-style {
+  .bg-primary-subtle {
+    background-color: rgba($primary, 0.2);
+  }
+  
+  .bg-success-subtle {
+    background-color: rgba($success, 0.2);
+  }
+  
+  .bg-warning-subtle {
+    background-color: rgba($warning, 0.2);
+  }
+  
+  .bg-danger-subtle {
+    background-color: rgba($danger, 0.2);
+  }
+  
+  .bg-info-subtle {
+    background-color: rgba($cyan, 0.2);
+  }
+  
+  .bg-secondary-subtle {
+    background-color: rgba($secondary, 0.2);
+  }
+  
+  .card {
+    background-color: rgba($black, 0.2);
+  }
+  
+  .form-control, .form-select, .input-group-text {
+    background-color: rgba($black, 0.3);
+    border-color: rgba($white, 0.1);
+    color: $gray-200;
+  }
+  
+  .image-upload-container,
+  .image-gallery-container,
+  .document-upload-container {
+    border-color: rgba($white, 0.1);
+    
+    &:hover {
+      border-color: $primary;
+    }
+  }
+}

@@ -1,2 +1,0 @@
-# ecommerce-store
-Ecommerce store

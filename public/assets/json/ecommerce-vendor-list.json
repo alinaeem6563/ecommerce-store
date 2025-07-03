@@ -1,0 +1,64 @@
+{
+    "data": [
+        {
+            "id": 1,
+            "status": "Suspended",
+            "name": "John's Electronics",
+            "description": "Specializing in high-quality electronic gadgets and accessories. Contact: john@example.com | Phone: +1 234 567 890"
+        },
+        {
+            "id": 2,
+            "status": "Active",
+            "name": "Fashion Hub",
+            "description": "Trendy and stylish clothing for all seasons. Contact: support@fashionhub.com | Phone: +1 987 654 321"
+        },
+        {
+            "id": 3,
+            "status": "Suspended",
+            "name": "Gourmet Delights",
+            "description": "Delivering the finest gourmet food items and ingredients. Contact: info@gourmetdelights.com | Phone: +1 456 789 012"
+        },
+        {
+            "id": 4,
+            "status": "Active",
+            "name": "Tech Innovators",
+            "description": "Leading provider of smart home and office solutions. Contact: contact@techinnovators.com | Phone: +1 321 654 987"
+        },
+        {
+            "id": 5,
+            "status": "Suspended",
+            "name": "Eco-Friendly Living",
+            "description": "Sustainable and eco-friendly home products. Contact: hello@ecofriendlyliving.com | Phone: +1 567 890 123"
+        },
+        {
+            "id": 6,
+            "status": "Suspended",
+            "name": "Book Haven",
+            "description": "Your one-stop shop for bestsellers and rare books. Contact: support@bookhaven.com | Phone: +1 678 901 234"
+        },
+        {
+            "id": 7,
+            "status": "Active",
+            "name": "Fitness Pro",
+            "description": "Premium gym equipment and accessories. Contact: info@fitnesspro.com | Phone: +1 789 012 345"
+        },
+        {
+            "id": 8,
+            "status": "Suspended",
+            "name": "Auto Experts",
+            "description": "Quality car parts and maintenance services. Contact: sales@autoexperts.com | Phone: +1 890 123 456"
+        },
+        {
+            "id": 9,
+            "status": "Active",
+            "name": "Home Essentials",
+            "description": "Everyday household products at great prices. Contact: contact@homeessentials.com | Phone: +1 901 234 567"
+        },
+        {
+            "id": 10,
+            "status": "Suspended",
+            "name": "Pet Paradise",
+            "description": "All-in-one store for pet food and accessories. Contact: support@petparadise.com | Phone: +1 012 345 678"
+        }
+    ]
+}

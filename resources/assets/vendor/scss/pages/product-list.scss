@@ -1,0 +1,272 @@
+// Product List Page Styles
+
+// Import variables
+@import'./variables.scss';
+$border-color: #dee2e6;
+// Product List Container
+.product-list-wrapper {
+  padding-top: 1.5rem;
+  padding-bottom: 3rem;
+}
+
+// Stats Cards
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: $border-radius;
+  
+  &.avatar-sm {
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.875rem;
+  }
+  
+  i {
+    font-size: 1.25rem;
+  }
+}
+
+.bg-primary-subtle {
+  background-color: rgba($primary, 0.1);
+}
+
+.bg-success-subtle {
+  background-color: rgba($success, 0.1);
+}
+
+.bg-warning-subtle {
+  background-color: rgba($warning, 0.1);
+}
+
+.bg-danger-subtle {
+  background-color: rgba($danger, 0.1);
+}
+
+.text-primary {
+  color: $primary !important;
+}
+
+.text-success {
+  color: $success !important;
+}
+
+.text-warning {
+  color: $warning !important;
+}
+
+.text-danger {
+  color: $danger !important;
+}
+
+// Product Table
+.product-img-wrapper {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: $border-radius-sm;
+  overflow: hidden;
+  
+  .product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.product-name {
+  color: $headings-color;
+  text-decoration: none;
+  max-width: 200px;
+  display: inline-block;
+  
+  &:hover {
+    color: $primary;
+    text-decoration: underline;
+  }
+}
+
+.product-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  
+  .badge {
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+  }
+}
+
+// Table Styles
+.table {
+  th {
+    font-weight: $font-weight-semibold;
+    white-space: nowrap;
+  }
+  
+  td {
+    vertical-align: middle;
+  }
+}
+
+// Filters
+.form-select, .form-control {
+  border-color: $border-color;
+  
+  &:focus {
+    border-color: $primary;
+    box-shadow: 0 0 0 0.25rem rgba($primary, 0.25);
+  }
+}
+
+// Dropdown Menus
+.dropdown-menu {
+  border-color: $border-color;
+  box-shadow: $box-shadow-sm;
+  
+  .dropdown-item {
+    padding: 0.5rem 1rem;
+    
+    i {
+      width: 1rem;
+      text-align: center;
+    }
+    
+    &:hover {
+      background-color: rgba($primary, 0.05);
+    }
+    
+    &.text-danger:hover {
+      background-color: rgba($danger, 0.05);
+    }
+    
+    &.text-success:hover {
+      background-color: rgba($success, 0.05);
+    }
+    
+    &.text-warning:hover {
+      background-color: rgba($warning, 0.05);
+    }
+  }
+}
+
+// Badges
+.badge {
+  font-weight: $font-weight-medium;
+  padding: 0.35em 0.65em;
+  
+  &.badge-sm {
+    font-size: 0.65rem;
+    padding: 0.2em 0.4em;
+  }
+}
+
+// Buttons
+.btn {
+  font-weight: $font-weight-medium;
+  
+  &.btn-icon {
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+// Search Input
+.input-group-merge {
+  position: relative;
+  
+  .input-group-text {
+    background-color: transparent;
+    border-right: 0;
+  }
+  
+  input {
+    border-left: 0;
+    padding-left: 0;
+    
+    &:focus {
+      box-shadow: none;
+      border-color: $border-color;
+    }
+  }
+}
+
+// Column Visibility Dropdown
+.column-visibility {
+  .dropdown-item {
+    display: flex;
+    align-items: center;
+    
+    .form-check-input {
+      margin-top: 0;
+    }
+  }
+}
+
+// Responsive Adjustments
+@media (max-width: 767.98px) {
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start !important;
+    
+    .d-flex {
+      margin-top: 1rem;
+      width: 100%;
+    }
+  }
+  
+  .product-name {
+    max-width: 150px;
+  }
+  
+  .table {
+    th, td {
+      white-space: nowrap;
+    }
+  }
+}
+
+// Dark Mode Support
+.dark-style {
+  .bg-primary-subtle {
+    background-color: rgba($primary, 0.2);
+  }
+  
+  .bg-success-subtle {
+    background-color: rgba($success, 0.2);
+  }
+  
+  .bg-warning-subtle {
+    background-color: rgba($warning, 0.2);
+  }
+  
+  .bg-danger-subtle {
+    background-color: rgba($danger, 0.2);
+  }
+  
+  .card {
+    background-color: rgba($black, 0.2);
+  }
+  
+  .table {
+    color: $gray-200;
+  }
+  
+  .dropdown-menu {
+    background-color: rgba($black, 0.3);
+    
+    .dropdown-item {
+      color: $gray-200;
+      
+      &:hover {
+        background-color: rgba($primary, 0.1);
+      }
+    }
+  }
+}
